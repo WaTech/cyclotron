@@ -1,0 +1,25 @@
+# Docker compose application for cyclotron
+web:
+  build: ./cyclotron-site
+  ports:
+    - "33080:8080"
+  links:
+    - web-service:cyclotron-svc
+
+  # cpu_shares: 200
+database:
+  image: mongo:3.2
+  ports:
+    - "27017:27017"
+  volumes:
+    - /var/lib/volumes/cyclotron_data_root:/data
+    - /var/lib/volumes/cyclotron_data_db:/data/db
+    - /var/lib/volumes/cyclotron_data_configdb:/data/configdb
+  # cpu_shares: 300
+
+web-service:
+  build: ./cyclotron-svc
+  ports:
+    - "33077:8077"
+  links:
+    - database:mongodb

@@ -37,6 +37,7 @@ jade = require 'gulp-jade'
 ngAnnotate = require 'gulp-ng-annotate'
 
 coffee = require 'gulp-coffee'
+coffeescript = require 'coffee-script/register'
 coffeelint = require 'gulp-coffeelint'
 uglify = require 'gulp-uglify'
 

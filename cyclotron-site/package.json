@@ -20,9 +20,12 @@
     "build": "gulp build",
     "test": "gulp test"
   },
+
   "devDependencies": {
+    "socket.io": "~1.7.1",
     "coffee-script": "~1.7",
     "del": "~1.1.1",
+    "express": "4.x.x",
     "gulp": "~3.9.1",
     "gulp-bower": "0.0.10",
     "gulp-coffee": "~2.3.1",
@@ -45,7 +48,7 @@
     "gulp-watch": "^4.3.5",
     "gulp-webserver": "~0.9.0",
     "jasmine-core": "~2.3.4",
-    "karma": "0.12.31",
+    "karma": "~1.3.0",
     "karma-chrome-launcher": "~0.1.7",
     "karma-coffee-preprocessor": "~0.2.1",
     "karma-coverage": "~0.2",
